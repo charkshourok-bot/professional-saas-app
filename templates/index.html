@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-page">
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-brand">
+                <i class="fas fa-layer-group"></i>
+                <span>TaskFlow Pro</span>
+            </div>
+            <h1>Welcome Back</h1>
+            <p>Sign in to access your workspace and continue where you left off.</p>
+
+            <form class="auth-form" method="POST">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="you@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full btn-large">Sign In</button>
+            </form>
+
+            <p class="auth-footer">
+                Don't have an account? <a href="{{ url_for('register') }}">Sign up</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
